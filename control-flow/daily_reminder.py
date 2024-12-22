@@ -18,17 +18,17 @@ if time_bound not in ("yes", "no"):
 # Match case for priority
 match priority:
     case "high":
-        message = f"'{task}' is a high priority task"
+        base_message = f"'{task}' is a high priority task"
     case "medium":
-        message = f"'{task}' is a medium priority task"
+        base_message = f"'{task}' is a medium priority task"
     case "low":
-        message = f"'{task}' is a low priority task"
+        base_message = f"'{task}' is a low priority task"
 
 # Modify message based on time sensitivity
 if time_bound == "yes":
-    message += " that requires immediate attention today!"
+    reminder_message = f"{base_message} that requires immediate attention today!"
 else:
-    message += ". Consider completing it when you have free time."
+    reminder_message = f"{base_message}. Consider completing it when you have free time."
 
-# Print the reminder
-print(f"\nReminder: {message}")
+# Print the customized reminder
+print(f"Reminder: {reminder_message}")
