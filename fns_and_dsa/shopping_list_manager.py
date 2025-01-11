@@ -26,12 +26,12 @@ def main():
                 print(f"{item}, removed from the list.")
             else: 
                 print(f"'{item}', not found in the list.")
-            # pass
+            pass
         elif choice == '3':
             # Display the shopping list
             print("\nShopping list:")
             if shopping_list:
-                for idx, items in enumerate(shopping_list, start=1):
+                for idx, item in enumerate(shopping_list, start=1):
                     print(f"{idx}. {item}")
                 else:
                     print("The list is empty.")
