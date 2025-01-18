@@ -10,5 +10,5 @@ def safe_divide(numerator, denominator):
         return f"The result of the division is {num/den}" 
 
     except ValueError:
-        print("Error: Please enter numeric values only.")
+        return "Error: Please enter numeric values only."
 
