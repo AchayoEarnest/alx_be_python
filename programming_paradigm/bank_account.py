@@ -7,10 +7,12 @@ class BankAccount:
         
 
     def deposit(self, amount):
+        """adds the specified ammount to the current balance"""
         if amount > 0:
             self.__account_balance += amount
     
     def withdraw(self, amount):
+        """Deduct ammount if current amount is not insufficient"""
         if amount > 0 and amount <= self.__account_balance:
             return True
         return False
